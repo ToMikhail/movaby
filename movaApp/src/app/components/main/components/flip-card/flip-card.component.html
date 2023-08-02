@@ -1,0 +1,12 @@
+<div class="flip-card">
+
+  <div class="flip-card-inner" [style.background-color]="card.color">
+    <div class="flip-card-front">
+    </div>
+
+    <div  class="flip-card-back" [style.background-color]="card.color">
+      <p>{{ card.title }}</p>
+      <button class="btn btn-play" type="button" (click)="playAudio(card)">play</button>
+    </div>
+  </div>
+</div>

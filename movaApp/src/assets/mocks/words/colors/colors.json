@@ -1,0 +1,47 @@
+[
+  {
+    "title": "чырвоны",
+    "color": "#FF0000",
+    "sound": "../../../../../assets/mocks/words/colors//sound/cyrwony.mp3"
+  },
+  {
+    "title": "чорны",
+    "color": "#000000",
+    "sound": "link"
+  },
+  {
+    "title": "зялены",
+    "color": "#008000",
+    "sound": "link"
+  },
+  {
+    "title": "сини",
+    "color": "#0000FF",
+    "sound": "link"
+  },
+  {
+    "title": "блакітны",
+    "color": "#ADD8E6",
+    "sound": "link"
+  },
+  {
+    "title": "аранжавы",
+    "color": "#FFA500",
+    "sound": "link"
+  },
+  {
+    "title": "жоўты",
+    "color": "#FFFF00",
+    "sound": "link"
+  },
+  {
+    "title": "белы",
+    "color": "#FFFFFF",
+    "sound": "link"
+  },
+  {
+    "title": "шэры",
+    "color": "#808080",
+    "sound": "link"
+  }
+]
