@@ -1,8 +1,10 @@
+@import '../assets/styles/colors.scss';
+
 :host {
-  margin: 0 auto;
   max-width: 1280px;
-  background-color: lightyellow;
 	height: 100%;
+  margin: 0 auto;
+  background-color: $primary-font-color;
 	display: flex;
 	flex-direction: column;
   justify-content:space-between;

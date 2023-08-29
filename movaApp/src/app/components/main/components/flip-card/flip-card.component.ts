@@ -13,13 +13,6 @@ import { BrowserModule } from '@angular/platform-browser';
 export class FlipCardComponent  {
   @Input() card: any;
 
-  // constructor() {
-    // console.log('card is:', this.card);
-  // }
-
-  // ngOnInit() {
-  //   console.log('userId is:', this.card);
-  // }
 
   public playAudio(item: any) {
     let audio = new Audio();

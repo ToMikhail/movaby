@@ -1,0 +1,67 @@
+:host {
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.color-container {
+  width: 250px;
+  height: 250px;
+}
+
+.content {
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.word-item {
+  background-color: whitesmoke;
+  border-radius: 2rem;
+  border: 2px solid black;
+  padding: .25rem;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover {
+    background-color: white;
+
+  }
+
+  .shaken {
+    animation: horizontal-shaking  0.15s infinite;
+  }
+
+}
+
+.shaken {
+  animation: horizontal-shaking  0.15s infinite;
+}
+
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0)
+  }
+
+  25% {
+    transform: translateX(5px)
+  }
+
+  50% {
+    transform: translateX(-5px)
+  }
+
+  75% {
+    transform: translateX(5px)
+  }
+
+  100% {
+    transform: translateX(0)
+  }
+}

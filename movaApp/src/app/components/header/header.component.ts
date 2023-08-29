@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import {MatTabsModule} from '@angular/material/tabs';
-import { MainComponent } from '../main/main.component';
+import { TranslateService } from '../../shared/services/translate.service';
 
 @Component({
   selector: 'app-header',
@@ -9,8 +8,11 @@ import { MainComponent } from '../main/main.component';
 })
 export class AppHeaderComponent {
 
+  public prefix: string = 'HEADER.';
 
-  public doSomething() {
-    console.log('hello');
+  constructor (private translateService: TranslateService) {}
+
+  public switchLang() {
+    this.translateService.switch();
   }
 }

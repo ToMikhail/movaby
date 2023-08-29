@@ -1,39 +1,26 @@
 :host {
   height: 100%;
+  // padding: 1rem;
 }
 
-::ng-deep .mat-mdc-tab-body-wrapper {
-  height: 100%;
-}
+// ::ng-deep .mat-mdc-tab-body-wrapper {
+//   height: 100%;
+// }
 
-::ng-deep .mat-mdc-tab-body-content {
-  display: flex;
-}
-::ng-deep .mat-mdc-tab-label-container {
-  padding: 1rem;
-}
+// ::ng-deep .mat-mdc-tab-body-content {
+//   display: flex;
+// }
 
-mat-tab-group {
-  height: 100%;
-}
+// ::ng-deep .mat-mdc-tab-label-container {
+//   // padding: 1rem;
+// }
+// ::ng-deep .mat-mdc-tab-label-container .mdc-tab-indicator--active {
+//   border-bottom: none;
+//   text-decoration: none;
+//   background: #000;
+//   box-shadow: 0;
+// }
 
-.sidebar {
-  width: 25%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: aqua;
-
-  .sidebar-link {
-    padding: .5rem;
-  }
-}
-
-.content {
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: flex-start;
-  gap: 1rem;
-}
+// mat-tab-group {
+//   height: 100%;
+// }

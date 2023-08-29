@@ -1,0 +1,5 @@
+<div class="color-container" [ngStyle]="{'background': color}"></div>
+
+<div class="content">
+  <p class="item word-item" *ngFor="let item of items" (click)="checkWord($event)">{{ item.title }}</p>
+</div>

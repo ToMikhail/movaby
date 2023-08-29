@@ -1,38 +1,50 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { AppHeaderComponent } from './components/header/header.component';
-import { AppFooterComponent } from './components/footer/footer.component';
-import { MainComponent } from './components/main/main.component';
-import { FlipCardComponent } from './components/main/components/flip-card/flip-card.component';
-import { CommonModule } from '@angular/common';
-import { MatTabsModule } from '@angular/material/tabs';
+// import { AppFooterComponent } from './components/footer/footer.component';
+import { SharedModule } from './shared/shared.module';
+import { MainModule } from './components/main/main.module';
+import { TranslateService } from './shared/services/translate.service';
+import { TranslatePipe } from './shared/pipes/translate.pipe';
+
+
+export function setupTranslateServiceFactory(
+  service: TranslateService): Function {
+return () => service.use('en');
+}
 
 @NgModule({
   declarations: [
     AppComponent,
     AppHeaderComponent,
     // AppFooterComponent,
-    // FlipCardComponent,
-    // MainComponent
+    TranslatePipe
   ],
   imports: [
     CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    // MatSlideToggleModule,
-    AppHeaderComponent,
-    // MainComponent,
-    // FlipCardComponent,
-    MatTabsModule
+    MainModule,
+    SharedModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    TranslateService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: setupTranslateServiceFactory,
+      deps: [
+        TranslateService
+      ],
+      multi: true
+    }
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

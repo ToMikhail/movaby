@@ -1,0 +1,48 @@
+@import '../../../../../assets/styles/colors.scss';
+
+:host {
+  width: 25%;
+  background-color: $primary-bg-color;
+  color: $primary-font-color;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid $primary-font-color;
+  padding-top: 1rem;
+
+
+  .sidebar-link {
+    padding: .5rem;
+  }
+
+  .dropdown-btn {
+    display: flex;
+    justify-content: flex-start;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+
+    &::after {
+      content: url(../../../../../assets/icons/down-arrow.svg);
+      width: 1rem;
+      height: 100%;
+      display: inline-flex;
+      padding-left: .5rem;
+
+    }
+  }
+
+  .dropdown-container {
+    display: none;
+    flex-direction: column;
+    padding-left: 1.5rem;
+
+    &.active {
+      display: flex;
+    }
+  }
+}
+

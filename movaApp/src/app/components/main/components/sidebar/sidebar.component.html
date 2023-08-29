@@ -1,0 +1,11 @@
+<aside class="sidebar">
+  <button class="dropdown-btn" (click)="toggleMenu()">Vocabulary</button>
+  <div class="dropdown-container" [ngClass]="{'active': isDropdown}">
+    <a class="sidebar-link" routerLink="colors" routerLinkActive="active">Colors</a>
+    <a class="sidebar-link" routerLink="animals" routerLinkActive="active">Animals</a>
+    <a class="sidebar-link" routerLink="plants" routerLinkActive="active">Plants</a>
+  </div>
+  <a class="sidebar-link" routerLink="plants" routerLinkActive="active">Greeting</a>
+  <a class="sidebar-link" routerLink="animals" routerLinkActive="active">Rules</a>
+  <a class="sidebar-link" routerLink="plants" routerLinkActive="active">Language bank</a>
+</aside>
